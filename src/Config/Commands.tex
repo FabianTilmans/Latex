@@ -1,0 +1,73 @@
+\newcommand{\todo}[1]{\textbf{\textsc{\textcolor{red}{(TODO: #1)}}}}
+\newcommand{\new}[1]{\textbf{\textsc{\textcolor{green}{(Marker: #1)}}}}
+
+\newcommand{\imgwidth}{\linewidth-2\fboxsep-2\fboxrule}
+
+\newcommand{\sees}[2][sec]{\hyperref[#1:#2]{ \autoref*{#1:#2}}}
+\newcommand{\seesf}[1]{\see[fig]{#1}}
+\newcommand{\seesl}[1]{\see[lst]{#1}}
+\newcommand{\seesi}[1]{\see[itm]{#1}}
+
+\newcommand{\see}[2][sec]{\hyperref[#1:#2]{siehe \autoref*{#1:#2}}}
+\newcommand{\seef}[1]{\see[fig]{#1}}
+\newcommand{\seel}[1]{\see[lst]{#1}}
+\newcommand{\seei}[1]{\see[itm]{#1}}
+
+\newcommand{\seeb}[2][sec]{\hyperref[#1:#2]{(siehe \autoref*{#1:#2})}}
+\newcommand{\seelb}[1]{\seeb[lst]{#1}}
+\newcommand{\seefb}[1]{\seeb[fig]{#1}}
+\newcommand{\seeib}[1]{\seeb[itm]{#1}}
+
+\newcommand{\seep}[3][sec]{\hyperref[#1:#2]{siehe #3 in \autoref*{#1:#2}}}
+\newcommand{\seepf}[2]{\seep[fig]{#1}{#2}}
+\newcommand{\seepl}[2]{\seep[lst]{#1}{#2}}
+\newcommand{\seepi}[2]{\seep[itm]{#1}{#2}}
+
+\newcommand{\seepb}[3][sec]{\hyperref[#1:#2]{(siehe #3 in \autoref*{#1:#2})}}
+\newcommand{\seepbf}[2]{\seepb[fig]{#1}{#2}}
+\newcommand{\seepbl}[2]{\seepb[lst]{#1}{#2}}
+\newcommand{\seepbi}[2]{\seepb[itm]{#1}{#2}}
+
+\newcommand{\seea}[1]{\hyperref[app:#1]{siehe Anhang~\ref*{app:#1}}}
+\newcommand{\seeab}[1]{\hyperref[app:#1]{(siehe Anhang~\ref*{app:#1})}}
+\newcommand{\seeabd}[1]{\hyperref[app:#1]{(Details siehe Anhang~\ref*{app:#1})}}
+\newcommand{\seepa}[2]{\hyperref[app:#1]{siehe #2 in Anhang~\ref*{app:#1}}}
+\newcommand{\seepba}[2]{\hyperref[app:#1]{(siehe #2 in Anhang~\ref*{app:#1})}}
+
+\newcommand{\seelz}[2]{\hyperref[lst:#1]{siehe \autoref*{lst:#1}, Zeile #2}}
+\newcommand{\seelbz}[2]{\hyperref[lst:#1]{(siehe \autoref*{lst:#1}, Zeile #2)}}
+
+\newcommand{\seeplz}[3]{\hyperref[lst:#1]{siehe #3 in \autoref*{lst:#1}, Zeile #2}}
+\newcommand{\seeplbz}[3]{\hyperref[lst:#1]{(siehe #3 in \autoref*{lst:#1}, Zeile #2)}}
+
+
+\newcommand{\ar}[2][sec]{\autoref{#1:#2}}
+\newcommand{\arl}[1]{\ar[lst]{#1}}
+\newcommand{\arf}[1]{\ar[fig]{#1}}
+\newcommand{\ari}[1]{\ar[itm]{#1}}
+
+\newcommand{\arb}[2][sec]{(\autoref{#1:#2})}
+\newcommand{\arfb}[1]{\arb[fig]{#1}}
+\newcommand{\arlb}[1]{\arb[lst]{#1}}
+\newcommand{\arib}[1]{\arb[itm]{#1}}
+
+\newcommand{\arlz}[2]{\hyperref[lst:#1]{\autoref*{lst:#1}, Zeile #2}}
+\newcommand{\arlbz}[2]{\hyperref[lst:#1]{(\autoref*{lst:#1}, Zeile #2)}}
+
+
+\newcommand{\ctapp}[2]{\footnote{\hyperref[app:#1]{#2}}}
+
+\newcommand{\cit}[3]{\footcite[#2][#3]{#1}}
+\newcommand{\ct}[2][]{\cit{#2}{#1}{}}
+\newcommand{\vg}[1]{\ct[vgl.]{#1}}
+
+\newcommand{\ctsep}{\textsuperscript{,}}
+\newcommand*{\authormark}{}
+\newcommand*{\markauthor}[1]{%
+   \renewcommand{\authormark}{#1}%
+   \ignorespaces
+}
+
+%Sources, Images and Tables
+\newcommand{\source}[1]{{\vspace{-1mm}\\\footnotesize\textsf{\rmfamily\textbf{Quelle:}} \textsf{\rmfamily#1}\par}}
+\newcommand{\sourcelst}[1]{{\vspace{-6mm}\\\footnotesize\textsf{\rmfamily\textbf{Quelle:}} \textsf{\rmfamily#1}\par}}

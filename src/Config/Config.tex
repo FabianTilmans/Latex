@@ -1,0 +1,125 @@
+%---------------FRONT PAGE CONFIG----------------%
+\newcommand{\documentType}{TYPE}
+\newcommand{\submissionDate}{dd.mm.yyyy}
+\newcommand{\documentTitle}{TITLE}
+\newcommand{\documentSubTitle}{-}
+\newcommand{\documentAuthor}{NAME}
+\newcommand{\documentAuthorAdress}{ADRESS}
+\newcommand{\documentExaminer}{EXAMINER}
+\newcommand{\assosiatedCompany}{COMPANY}
+\newcommand{\matriculationNumber}{matrknumber}
+\newcommand{\studygroup}{group}
+
+%Pdf
+\pdfinfo{ /ModDate ()  /CreationDate () }
+\pdftrailerid{}
+
+
+%-----------BASIC IMPORTS----------------%
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage[]{xcolor}
+\usepackage{tabularx} % tables
+\usepackage{fixfoot}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{ltablex}
+\usepackage{tikz}
+\usepackage{color, colortbl} 
+\usepackage{url} %url handling (\url{https://...})
+\usepackage{paralist} % lists without spacing
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype} %enhances readablity
+\usepackage{listings}
+\usepackage[printonlyused]{acronym}
+
+%-----------Formalia---------------------%
+\usepackage[a4paper, left=4cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern} %Latin modern font
+\usepackage[onehalfspacing]{setspace} % Line spacing
+\usepackage[babel,german=quotes]{csquotes} %german quotes ("")
+\usepackage[stable, multiple]{footmisc}
+\usepackage[format=hang, font={footnotesize, sf}, labelfont=bf, justification=raggedright,singlelinecheck=false]{caption} %captions in tables and images
+
+
+%SETTINGS FOR FOMALIA
+\addtokomafont{disposition}{\rmfamily}
+%\captionsetup[table]{name={\rmfamily Tabelle}}
+%\captionsetup[listing]{name={\rmfamily Listing}}
+%\captionsetup[figure]{name={\rmfamily Abbildung}}
+\DeclareCaptionFont{quack}{\rmfamily}
+\parindent 0pt
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\lstset{
+	breaklines=true,
+	postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}},
+	numbers=left,
+	inputencoding=utf8,
+	emptylines=1,
+	showlines=true
+}
+
+%LIstings
+\definecolor{groovyblue}{HTML}{0000A0}
+\definecolor{groovygreen}{HTML}{008000}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+
+%\lstdefinelanguage{base}[]{SQL}{
+%	keywordstyle=\color{groovyblue}\bfseries,
+%	stringstyle=\color{groovygreen}\ttfamily
+%}
+
+%-----------Fancy Header----------------%
+%\usepackage{fancyhdr}
+\usepackage{scrlayer-scrpage}
+\clearpairofpagestyles 
+\KOMAoptions{
+   headsepline = true,
+   footsepline = false,
+   plainfootsepline = true,
+}
+\ohead{\headmark}
+\ofoot*{\pagemark}
+
+
+%-----------BibTex----------------%
+\usepackage{etoolbox} %is required
+\usepackage[
+    style=authoryear,
+    %citestyle=authoryear-fhdw,
+    giveninits=false, %complete first names
+    natbib=true,
+    urldate=long,
+    seconds=true,
+    dashed=false,
+    maxcitenames=3,
+    maxbibnames=99,
+    backend=biber
+]{biblatex}
+\addbibresource{Directories/Library.bib}
+
+%Graphics
+\graphicspath{{Assets/Images/}}
+\usetikzlibrary{arrows,positioning,calc,intersections,decorations.markings,fit,chains}
+\tikzset{
+	base/.style={
+			draw,
+			rectangle,
+			align=center
+		}
+}
+\microtypecontext{spacing=nonfrench}
+
+\usepackage{hyperref}
+\hypersetup{pdfinfo={ Creator={}, Producer={} }}
+\usepackage[ngerman,capitalise]{cleveref} % better referencing (has to be imported after hyperref)
+
+
+%Commands
+\input{Config/Commands.tex}

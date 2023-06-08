@@ -1,0 +1,60 @@
+\documentclass[     
+	paper=A4,           % Papierformat
+	fontsize=12pt,      % Schriftgröße (12pt, 11pt (Standard))
+	BCOR=12mm,          % Bindekorrektur, bspw. 1 cm
+	DIV=14,             % breiter Satzspiegel
+	parskip=half,       % Absatzformatierung s. scrguide 3.1
+	headsepline,        % Trennline zum Seitenkopf
+	footsepline,       % Trennline zum Seitenfuß
+	%normalheadings,    % Überschriften etwas kleiner (smallheadings)
+	listof=totoc,       % Tabellen & Abbildungsverzeichnis ins Inhaltsverzeichnis
+	%bibtotoc,          % Literaturverzeichnis im Inhalt
+	%draft              % Überlangen Zeilen in Ausgabe gekennzeichnet
+	footinclude=false,  % Fußzeile in die Satzspiegelberechnung einbeziehen
+	headinclude=true,   % Kopfzeile in die Satzspiegelberechnung einbeziehen
+	final,              % draft beschleunigt die Kompilierung
+	ngerman
+]{scrartcl}
+
+\input{Config/Config.tex}
+
+%BEGIN OF DOCUMENT%
+
+\begin{document}
+
+%---------------Frontpage---------------%
+\input{Static/Frontpage.tex}
+\pagenumbering{Roman}
+
+%-------------Sperrvermerk--------------%
+\input{Static/Sperrvermerk.tex}
+
+%----------Executive Summary------------%
+\input{Content/ExecutiveSummary.tex}
+
+%--------------Directories--------------%
+\input{Directories/TableOfContents.tex} % Table of contents
+\input{Directories/ListOfAbbreviations.tex} %Abkürzungsverzeichnis
+\input{Directories/ListOfTables.tex} % Table of tables !?
+%\input{Directories/ListofListings.tex} %Quelltextverzeichnis
+
+\ohead*{\leftmark}
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%            Content         %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%       End of Content       %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-----------Source Directory------------%
+\input{Static/SourceDirectory.tex}
+
+%--------Ehrenwörtliche Erklärung-------%
+\input{Static/EhrenwoertlicheErklaerung.tex}
+
+\end{document}
