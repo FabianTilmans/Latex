@@ -1,8 +1,0 @@
-\babel@toc {ngerman}{}\relax 
-\contentsline {section}{Sperrvermerk}{I}{section*.1}%
-\contentsline {section}{Executive Summary}{II}{section*.2}%
-\contentsline {section}{Abkürzungsverzeichnis}{IV}{section*.4}%
-\contentsline {section}{\nonumberline Tabellenverzeichnis}{V}{section*.5}%
-\contentsline {section}{Quellenverzeichnis}{1}{section*.6}%
-\contentsline {section}{Ehrenwörtliche Erklärung}{2}{section*.7}%
-\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
